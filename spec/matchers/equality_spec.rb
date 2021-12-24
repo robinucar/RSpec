@@ -47,6 +47,7 @@ describe 'equality matchers' do
       expect(c).not_to equal [1, 2, 3] #it will pass because they are 2 different arrays with same value they are not identical
     end
   end
+<<<<<<< HEAD
 end
 
 # to sum up: 
@@ -54,3 +55,6 @@ end
 # eql = same value + same type
 # equal = checks identity, memory adress, object has to be same
 # be = checks identity, memory adress, object has to be same
+=======
+end
+>>>>>>> 1caad3d9c39b14923657b7e860c8d95ae9397de4
