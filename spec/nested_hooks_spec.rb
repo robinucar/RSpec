@@ -5,7 +5,7 @@ describe 'nested hooks   (A)' do
   end
 
   before(:example) do
-    puts 'Outer Before example ' # it will run before examples 1, 
+    puts 'Outer Before example ' # it will run before example 1. ALSO BEFORE EXAMPLES 2, 3
   end
 
   it 'does basic math (1)' do
@@ -17,7 +17,7 @@ describe 'nested hooks   (A)' do
       puts 'Inner Before context' # it will run only before second high level context which is (B)
     end
     before(:example) do
-      puts 'Inner Before example'
+      puts 'Inner Before example' # it will run before example 2 and 3 BUT NOT 1
     end
     it 'does some more basic math (2)' do
       expect( 5 + 6).to eq 11
