@@ -24,4 +24,27 @@ describe 'equality matchers' do
     expect(b).to eql 3
     end
   end
+
+  describe 'equal and be matcher' do
+    let(:c) { [1, 2, 3] }
+    let(:d) { [1, 2, 3] }
+    let(:e) { c }
+
+    it 'checks about object identity' do
+      expect(c).to eq d # two different arrays but values are the same  it will pass the test
+
+      expect(c).to eql d # two different arrays but values and types are the same   it will pass the test
+
+      expect(c).to equal e # they are the same array not different. Two different names for same object. it will pass
+
+      expect(c).to be e    # they are the same array not different. Two different names for same object. it will pass
+
+      #expect(c).to equal d ## they are not same array. there are two different arrays with same value. The adresses of memory of these arrays
+      #is totally different. So it will not pass the equal test method. 
+      
+      expect(c).not_to equal d #it will pass because they are 2 different arrays with same value they are not identical
+
+      expect(c).not_to equal [1, 2, 3] #it will pass because they are 2 different arrays with same value they are not identical
+    end
+  end
 end
