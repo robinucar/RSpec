@@ -10,6 +10,7 @@ describe 'comparison matchers' do
     expect(22).to be <= 22
   end
   describe 100 do
+    # one liner syntax
     it { is_expected.to be > 90 }
 
     it { is_expected.to be < 200 }
