@@ -1,6 +1,6 @@
 describe 'a random double' do
   it 'only allows defined method to be invoked' do
-    # stunman = double('Mr. Danger', fall_off_ladder: 'Ouch', light_on_fire: true) #accept multiple methods
+    # stunman = double('Mr. Danger', fall_off_ladder: 'Ouch', light_on_fire: true) # accept multiple methods
     # expect(stunman.fall_off_ladder).to eq('Ouch')
     # expect(stunman.light_on_fire).to eq(true)
 
